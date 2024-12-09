@@ -1,0 +1,11 @@
+.big-card-container{
+    width: 300px;
+    height: fit-content;
+    max-height: 500px;
+}
+
+img.big-card-container{
+
+    width: 300px;
+    height:200px;
+}

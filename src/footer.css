@@ -1,0 +1,91 @@
+.footer-container {
+    width: 100%;
+    background-color: rgba(219, 0, 11, 1);
+    height: 200px;
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Align content to the right */
+    align-items: center; /* Center content vertically */
+    box-sizing: border-box; /* Include padding in the width */
+    gap: 100px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.right-side {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 10px; /* Space between the image and icons */
+    margin-right: 20px; /* Adjust for better responsiveness */
+}
+
+.icons-container {
+    display: flex; /* Arrange icons horizontally */
+    gap: 10px; /* Space between icons */
+}
+
+.right-side img {
+    width: 70px; /* Adjust logo size */
+    height: 30px;
+    border-radius: 5px;
+}
+
+.left-side {
+    display: flex; /* Arrange the three lists horizontally */
+    gap: 20px; /* Add space between the lists */
+    direction: rtl; /* Ensure text alignment is right-to-left */
+    flex-wrap: wrap; /* Wrap lists for smaller screens */
+}
+
+.left-side ul {
+    display: flex;
+    flex-direction: column; /* Stack list items vertically */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove default bullets */
+}
+
+.left-side li {
+    padding-left: 15px; /* Space between the left border and the text */
+    padding-right: 10px; /* Space between the right border and the text */
+    color: white; /* White text for categories */
+    font-size: 14px;
+    border-right: 1px solid aliceblue; /* Add a visible right border */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column; /* Stack the footer sections vertically */
+        height: auto; /* Allow the height to adjust dynamically */
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* Reduce gap for smaller screens */
+        padding: 10px;
+    }
+
+    .right-side {
+        margin-right: 0; /* Remove excessive margin */
+    }
+
+    .left-side {
+        display: grid; /* Switch to grid layout */
+        grid-template-columns: 1fr 1fr; /* Create two equal columns */
+        gap: 10px; /* Adjust spacing between columns */
+        width: 100%; /* Ensure full width on mobile */
+        justify-content: center; /* Center the grid */
+        border-bottom: 1px solid wheat; /* Line separating the footer sections */
+        padding-bottom: 10px;
+    }
+
+    .left-side ul {
+        flex-direction: column; /* Stack items in each column vertically */
+        margin: 0; /* Remove any extra margin */
+        padding: 0; /* Remove padding for better alignment */
+        border-right: 1px solid wheat; /* Single right border for the grid */
+    }
+
+    .left-side li {
+        border-right: none; /* Remove borders for mobile view */
+        text-align: center; /* Center-align the text for a clean look */
+    }
+}

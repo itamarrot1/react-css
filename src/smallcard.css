@@ -1,0 +1,33 @@
+.small-card-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%; /* Ensures full width on small screens */
+    max-width: 250px; /* Restrict the width to prevent text overflow */
+    box-sizing: border-box;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Show an ellipsis if text overflows */
+    border: none;
+}
+
+img.small-card-container {
+    border-radius: 30px; /* Rounded corners for the image */
+    width: 100%; /* Ensure the image fits the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 600px) {
+    .small-card-container {
+        max-width: 300px; /* Set a reasonable maximum width for mobile devices */
+        margin: 0 auto; /* Center the card horizontally */
+    }
+
+    img.small-card-container {
+        border-radius: 15px; /* Reduce the border-radius for smaller screens */
+        width: 100%; /* Keep the image responsive */
+        height: auto; /* Preserve the aspect ratio */
+    }
+}

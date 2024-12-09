@@ -1,0 +1,98 @@
+.sec-news-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1100px; /* Optional: Set a max width to control layout */
+    box-sizing: border-box;
+    direction: rtl;
+    justify-content: center;
+    height: 100%; /* Full height for vertical alignment */
+}
+
+.sec-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    direction: rtl;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 3px solid rgb(61, 61, 61);
+}
+
+.sec-header-icon {
+    transition: transform 0.3s ease; /* Smooth movement */
+}
+
+.sec-header:hover .sec-header-icon {
+    transform: translateX(-5px); /* Move icon to the right */
+}
+
+button.sec-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+    direction: ltr;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.left-column {
+    width: 40%;
+    max-width: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-column {
+    width: 58%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Responsive Adjustments for Mobile Screens */
+@media (max-width: 600px) {
+
+    .sec-news-container{
+        align-items: flex-start;
+    }
+    .content-row {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center the columns */
+    }
+
+    .left-column {
+        width: 90%; /* Adjust width to fit smaller screens */
+        max-width: 100%; /* Allow full width */
+    }
+
+    .right-column {
+        width: 100%; /* Take up full width of the container */
+        grid-template-columns: 1fr; /* Change to single-column grid */
+        gap: 10px; /* Adjust spacing between items */
+        display: grid;
+    }
+
+    .sec-header {
+        flex-direction: row; /* Stack elements vertically in the header */
+        gap: 8px; /* Adjust gap for smaller screens */
+        justify-content: flex-start;
+        text-align: right;
+    }
+
+    button.sec-header {
+        display: none;
+    }
+}

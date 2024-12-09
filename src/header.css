@@ -1,0 +1,99 @@
+/* General header styles */
+.header-container {
+    background-color: rgba(219, 0, 11, 1);
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .head-features{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.3); /* Slight transparency */
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    color: #ffff;
+  }
+  input.head-features{
+    color: #ffff;
+    border: none;
+    background-color: transparent;
+    box-sizing: border-box;
+  }
+
+  input.head-features::placeholder{
+    color: #ffff;
+    direction: ltr;
+    text-align: right;
+    border: none;
+  }
+  input.head-features:focus {
+    border: none;
+    outline: none; /* Ensure no additional outline is visible */
+  }
+  
+  .but-news{
+    background:#ffff ;
+    border-radius: 8px;
+    border: none;
+    color:rgba(219, 0, 11, 1);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px;
+  }
+
+
+
+  .header-desktop {
+    display: flex;
+    justify-content: center; /* Center all features horizontally */
+    align-items: center; /* Align features vertically */
+    gap: 16px; /* Small space between the features */
+    width: 100%; /* Ensure it spans the full width */
+  }
+  
+  .header-mobile {
+    display: none; 
+    width: 100%;
+    align-items: center;
+    gap: 60px;
+    justify-content: center;
+  }
+
+  img.header-mobile{
+    align-items: center;
+
+  }
+  
+  .mobile-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: space-between;
+  }
+  
+  .mobile-menu-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header-desktop {
+      display: none; /* Hide desktop header on small screens */
+    }
+  
+    .header-mobile {
+      display: flex; /* Show mobile header on small screens */
+    }
+  }
+  
